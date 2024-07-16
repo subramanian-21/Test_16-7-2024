@@ -2,7 +2,7 @@
 public class MatrixOrder {
 
     public static void main(String[] args) {
-        handlematrixOrder(6,6);
+        handlematrixOrder(7,7);
     }
 
     static void handlematrixOrder(int m, int n) {
@@ -15,12 +15,11 @@ public class MatrixOrder {
         while (ele != m*n+1 && i < m && j >= 0 && i >= 0 && j < n) {
 
             mat[i][j] = ele;
-            printMat(mat);
-            System.out.println(i+" " +j);
-            if ((i % 2 == 0 && j == n - 1 && i!= m-1 ) || (j == 0 && i%2 == 1)) {
+            
+            if ((i % 2 == 0 && j == n - 1 && i!= m-1 )|| (j == 0 && i%2 == 1) ) {
                 i++;
             }
-            else if ((i == 0 && j % 2 == 1) || (i == m-1 && j%2 == 0)) {
+            else if ((i == 0 && j % 2 == 1) || (i == m-1 && j%2 == 0)  ) {
                 j--;
             }  
             else if (rev) {
@@ -36,9 +35,10 @@ public class MatrixOrder {
                 if ((i == m-1 || j == m-1) ) {
                     rev = !rev;
                 }
-            }   
+            }  
             ele++;
         } 
+        printMat(mat);
     }
 
     static void printMat(int[][] mat) {

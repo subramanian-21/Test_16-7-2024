@@ -1,6 +1,6 @@
 public class NumberInWords {
     public static void main(String[] args) {
-        System.out.println(numberInWords(3276702));    
+        System.out.println(numberInWords(327678));    
     }
     static String numberInWords(int n){
         String out = "";
@@ -44,10 +44,10 @@ public class NumberInWords {
                         }
                         break;
                     }
-                    case 6 :{
-                        out = tens[rem-1]+"Lakh"+out;
-                        break;
-                    }
+                    // case 6 :{
+                    //     out = tens[rem-1]+"Lakh"+out;
+                    //     break;
+                    // }
                 }
             }
             count++;
